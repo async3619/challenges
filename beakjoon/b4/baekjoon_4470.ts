@@ -1,5 +1,5 @@
 function solution([, ...input]: string[]) {
-    console.log(input.map((l, n) => `${n + 1}. ${l.trim()}`).join("\n"));
+    console.log(input.map((l, n) => `${n + 1}. ${l}`).join("\n"));
 }
 
 (callback => {
