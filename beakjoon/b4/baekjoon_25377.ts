@@ -1,7 +1,7 @@
 function solution([, ...data]: string[]) {
     const t = data
         .map(p => p.split(" ").map(t => parseInt(t)))
-        .filter(([a, b]) => a < b)
+        .filter(([a, b]) => a <= b)
         .map(([, b]) => b);
 
     if (!t.length) {
