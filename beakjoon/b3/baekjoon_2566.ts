@@ -1,7 +1,7 @@
 function solution(input: string[]) {
     const table = input.map(p => p.split(" ").map(n => parseInt(n)));
     let max = 0;
-    let pos = [0, 0];
+    let pos = [1, 1];
     for (let y = 0; y < table.length; y++) {
         for (let x = 0; x < table[y].length; x++) {
             if (max < table[y][x]) {
