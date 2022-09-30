@@ -7,8 +7,13 @@ function solution([, ...data]: string[]) {
                     .split(" ")
                     .map(p => parseInt(p)),
             )
-            .sort(([a], [b]) => a - b)
-            .sort(([, a], [, b]) => a - b)
+            .sort(([ax, ay], [bx, by]) => {
+                if (ax == bx) {
+                    return ay < by ? -1 : ay > by ? 1 : 0;
+                } else {
+                    return ax < bx ? -1 : 1;
+                }
+            })
             .map(p => p.join(" "))
             .join("\n"),
     );
