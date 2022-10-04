@@ -1,0 +1,30 @@
+cases:
+    - provider: baekjoon
+      id: "1018"
+      items:
+          - input: |
+                8 8
+                WBWBWBWB
+                BWBWBWBW
+                WBWBWBWB
+                BWBWBWBW
+                BWBWBWBW
+                WBWBWBWB
+                BWBWBWBW
+                WBWBWBWB
+            output: |
+                32
+
+          - input: |
+                9 9
+                BBBBBBBBB
+                WWWWWWWWW
+                WWWWWWWWW
+                WWWWWWWWW
+                WWWWWWWWW
+                WWWWWWWWW
+                WWWWWWWWW
+                BWWWWWWWW
+                WWBWBWBWW
+            output: |
+                29
