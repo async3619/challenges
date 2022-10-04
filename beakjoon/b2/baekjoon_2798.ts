@@ -2,7 +2,7 @@ function solution([a, b]: string[]) {
     const [, m] = a.split(" ").map(p => parseInt(p));
     const data = b.split(" ").map(p => parseInt(p));
 
-    let c = Math.abs(Math.max(...data) - m);
+    let v = -1;
     for (let i = 0; i < data.length; i++) {
         for (let j = 0; j < data.length; j++) {
             for (let k = 0; k < data.length; k++) {
@@ -10,19 +10,17 @@ function solution([a, b]: string[]) {
                     continue;
                 }
 
-                const s = data[i] + data[j] + data[k];
-                if (s > m) {
+                const n = data[i] + data[j] + data[k];
+                if (n > m || Math.abs(m - v) < Math.abs(m - n)) {
                     continue;
                 }
 
-                if (Math.abs(c - m) > Math.abs(s - m)) {
-                    c = s;
-                }
+                v = n;
             }
         }
     }
 
-    console.log(c);
+    console.log(v);
 }
 
 (callback => {
